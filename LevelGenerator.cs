@@ -20,8 +20,8 @@ public class LevelGenerator : MonoBehaviour
     #endregion
 
     #region Private Variables
-    private GameObject previous_cylinder;//yeni bir silindir olşturmadan önce en son olusturdugumuz silindiri içine atabıleceğimiz değişken yaparız.Oluşturulan silindiri kayıt eder ve bunun konumunu baz alarak hareket eder diğer silindir.
-                                         //fazladan kod yazmamızı kısaltırız.
+    private GameObject previous_cylinder;
+                                         
     #endregion
 
 
@@ -58,7 +58,7 @@ public class LevelGenerator : MonoBehaviour
         {
             previous_cylinder = Instantiate(cylinder, Vector3.zero, Quaternion.identity);
         }
-        else//diğer tüm silindirler.
+        else
         {
 
             float spawnPoint = previous_cylinder.transform.position.z + previous_cylinder.transform.localScale.y + cylinder.transform.localScale.y;
