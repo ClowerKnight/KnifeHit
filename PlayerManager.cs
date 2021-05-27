@@ -76,10 +76,9 @@ public class PlayerManager : MonoBehaviour
 
     private void HealthCounter()
     {
-        //Clamp:ilk olarak neyi tanımladıgımız,en düşüğü,en fazlası canı -1 ile 10 arasında tutar.
         health = Mathf.Clamp(health,-1, 10.0f);
         
-        if (health>=0)//can 0 dan daha düşükse azalmaya devam etmeycektir.
+        if (health>=0)
         {
             health -= Time.deltaTime;
             UIManager.ui_m.SetPlayerHealth(health);
